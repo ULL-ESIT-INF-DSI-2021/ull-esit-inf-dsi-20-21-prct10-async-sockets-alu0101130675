@@ -15,14 +15,10 @@ export class Manejador {
  * @returns true en caso de tener exito, false en otro caso
  */
   addNote(usuario: string): boolean {
-    // contenido of the JSON of each user
     const contenido = `{ 
       "title": "${this.note.getTitulo()}", "body": "${this.note.getCuerpo()}" ,
        "color": "${this.note.getcolor()}" }`;
-
-    // Create the fileusuario with the title along
     const nombreNota = this.note.getTitulo().replace(" ", "");
-    // If the user exists
     if (!fs.existsSync(`./notas/${usuario}`)) {
       fs.mkdirSync(`./notas/${usuario}`, {recursive: true});
     }
@@ -71,7 +67,6 @@ export class Manejador {
  * @returns notas del usuario
  */
   listnota(usuario: string): nota[] {
-    // If the user exists
     if (fs.existsSync(`./notas/${usuario}`) === true) {
       const arraynota: nota[] = [];
       // Recorremos todos los titulos de las notas y guardamos el contenido
