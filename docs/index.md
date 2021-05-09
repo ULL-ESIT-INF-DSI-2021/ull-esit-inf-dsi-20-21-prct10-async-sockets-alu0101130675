@@ -499,6 +499,7 @@ Si el vector de notas que es lo que devuelve la lista de notas es 0 quiere decir
 Una vez que el switch se ejecuta tenemos una respuesta formada por lo que la mandamos con con write al cliente.
 Las siguientes lineas quiere decir que si se emite un evento close significa que un cliente si ha desconectado y lo que va despues de esto es para que el server se mantenga escuchando mas peticiones.
 ### class Manejador
+
 ~~~
 import * as fs from 'fs';
 import {nota} from './nota';
