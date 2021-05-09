@@ -1,0 +1,12 @@
+{
+  "entryPoints": [
+    "./src/cliente.ts",
+    "./src/clienteEventEmitter.ts",
+    "./src/manejador.ts",
+    "./src/server.ts",
+    "./src/nota.ts",
+    "./src/serverEventEmitter.ts",
+    "./src/tipos.ts"
+  ],
+  "out":"./documents"
+}
